@@ -1,0 +1,40 @@
+﻿@model ContactManager.Models.Contact
+
+@{
+    ViewData["Title"] = "Add Contact";
+}
+
+<!--Rohith Pulyala, CIS 174, 1/27/2026-->
+
+<!--Page created through scaffolding.-->
+
+<h1>Add New Contact</h1>
+
+<!--Page for name, phone number, address, and notes, to be created.-->
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="PhoneNumber" class="control-label"></label>
+                <input asp-for="PhoneNumber" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Address" class="control-label"></label>
+                <input asp-for="Address" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Note" class="control-label"></label>
+                <textarea asp-for="Note" class="form-control"></textarea>
+            </div>
+            <div class="form-group mt-3">
+                <input type="submit" value="Save Contact" class="btn btn-success" />
+                <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+            </div>
+        </form>
+    </div>
+</div>
